@@ -1,0 +1,219 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;  
+}
+
+/* Animation */
+@keyframes example {
+    0%   {background-color: rgb(0, 0, 0, 0.8);}
+    33%  {background-color: rgb(0, 141, 35, 0.8);}
+    66%  {background-color: rgb(80, 212, 242, 0.8);}
+    100% {background-color: rgb(7, 205, 7, 0.8);}
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* li items inside of nav */
+nav li {
+    display: inline; /* horizontal */
+    margin: 20px;
+}
+
+/* ul inside of nav */
+nav ul {
+    margin: 0;
+    list-style-type: none; /* removes bullets from bulleted list */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    /* Animation for colors of nav menu */
+    animation-name:example; 
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}   
+
+nav{
+    display: block;
+    color: white;
+
+    z-index:1;
+    position: fixed;
+    width:100%;
+    top:0;
+}
+
+/* Links inside of nav bar */
+nav a {
+    color:#555555;
+    text-decoration: none; /* No underline under links */
+}
+
+/* properties when hovering over links in nav bar */ 
+nav a:hover {
+    color: white;
+}
+
+/* properties of hero image class */
+.hero-image {
+    background-image:url("../images/sunset.jpg");
+
+    height: 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    position:relative;
+
+}
+
+/* properties of hero text class */
+.hero-text {
+    color: rgb(5, 69, 13);
+    text-shadow: 1px 1px 2px rgb(243, 238, 238), 0 0 10px rgb(221, 221, 228), 0 0 5px darkblue;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%); /* center text on page */
+}
+
+/* main ID items (3 articles for center area)*/
+#main {
+    width:70%;
+    float: right;
+    height:100%;
+    padding-right:20px;
+    padding-top:20px;
+}
+
+/* side ID items (sidebar) */
+#side {
+    width: 20%;
+    float:left;
+    height:100%;
+    padding:20px;
+}
+
+/* Properties of profile image */
+#profile-image {
+    height:12vw; /* dynamic sizing*/
+    border-radius:50%; /* Makes profile image a circle*/
+    border:5px solid lightgray;
+}
+
+/* Properties of text under profile */
+#profile {
+    padding-top:20px;
+    text-align:center;
+    background-color:#fbb6098a;
+}
+
+/* Properties of ul in side articles class */
+.side-articles ul{
+    list-style-type:none; /* Removes bullets */
+    padding-left:0px;
+}
+
+/* Properties for name under profile */
+#profile h2 {
+    display:inline;
+}
+
+/* Properties of text in profile details */
+#profile-details {
+    text-align:center;
+    font-size:1.5vw;
+}
+
+/* Properties for side articles AND main articles */
+.side-articles, .main-articles {
+    padding: 10px;
+    margin-bottom:10px;
+    border-radius:10px; /* Rounds the borders */
+}
+
+/* Properties of just side articles */
+.side-articles {
+    background-color: rgba(143, 3, 3, 0.8);
+    text-align:center;
+}
+
+/* Properties of just main articles */
+.main-articles {
+    background-color: rgba(211, 211, 211, 0.896);
+}
+
+.main-articles h1 {
+    text-align:center;
+}
+
+figure {
+    text-align: center;
+}
+
+/* Properties of ANY form */
+form {
+    margin-top:20px;
+}
+
+/* Properties of ANY textarea and input */
+textarea, input {
+    background-color:lightgray;
+    border-radius:5px;
+    padding:5px;
+    margin:5px;
+}
+
+/* Properties of h1 titles in side articles class */
+.side-articles h1 {
+    margin-bottom: 20px;
+}
+
+/* Properties of footer */
+footer{
+    bottom:0px;
+    width:100%;
+    background-color:black;
+    height:5wh; /* Takes up 5% of the screen */
+    margin-top:0px;
+}
+
+/* Properties for footer text */
+footer div {
+    text-align:center;
+    color:white;
+}
+
+/* Properties for main */
+main {
+    overflow:auto; /* Handles overflow so floater can get to bottom*/
+}
+
+/* Properties for horizontal rule in footer */
+footer hr {
+    margin-top:0px;
+    height:12px;
+    border:0px;
+    box-shadow:inset 0px 12px 12px -12px white /* Shading bar for footer */
+}
+
+/* Properties for side pages */
+#side-page {
+    width:70%;
+    float: center;
+    text-align: left;
+    height:100%;
+    padding-top:20px;
+}
