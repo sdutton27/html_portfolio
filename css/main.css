@@ -1,17 +1,29 @@
+/*  Simon Dutton
+    due March 13, 2023
+    main.css holds the css styles for the portfolio website */
+
+/* Properties of entire document */
 body, html {
     height: 100%;
     margin: 0px;
     font-family: "Montserrat", sans-serif;  
 }
 
-/* Animation */
-@keyframes example {
+/* Animation for nav bar */
+@keyframes nav-animation {
     0%   {background-color: rgb(0, 0, 0, 0.8);}
     33%  {background-color: rgb(0, 141, 35, 0.8);}
     66%  {background-color: rgb(80, 212, 242, 0.8);}
     100% {background-color: rgb(7, 205, 7, 0.8);}
 }
 
+/* Animation for hero-text */
+@keyframes hero-animation {
+    from  {font-size: 5vw;}
+    to  {font-size: 7vw;}
+}
+
+/* Video to play in background */
 #background-video {
     width: 100vw;
     height: 100vh;
@@ -39,7 +51,7 @@ nav ul {
     text-align: center;
 
     /* Animation for colors of nav menu */
-    animation-name:example; 
+    animation-name:nav-animation; 
     animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -87,6 +99,14 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%); /* center text on page */
+}
+
+.hero-text h1{
+    /* Animation for colors of nav menu */
+    animation-name: hero-animation; 
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 /* main ID items (3 articles for center area)*/
@@ -139,8 +159,8 @@ nav a:hover {
 
 /* Properties for side articles AND main articles */
 .side-articles, .main-articles {
-    padding: 10px;
-    margin-bottom:10px;
+    padding: 20px;
+    margin-bottom:15px;
     border-radius:10px; /* Rounds the borders */
 }
 
@@ -155,10 +175,12 @@ nav a:hover {
     background-color: rgba(211, 211, 211, 0.896);
 }
 
+/* Properties of headings for main articles */
 .main-articles h1 {
     text-align:center;
 }
 
+/* ANY figure in the project */
 figure {
     text-align: center;
 }
@@ -211,9 +233,14 @@ footer hr {
 
 /* Properties for side pages */
 #side-page {
-    width:70%;
+    width:100%;
     float: center;
-    text-align: left;
+    text-align: center;
     height:100%;
     padding-top:20px;
+}
+
+/* Properties for ANY ordered list on a side page */
+#side-page ol {
+    text-align: left;
 }
